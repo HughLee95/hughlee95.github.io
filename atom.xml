@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hughlee95.github.io</id>
     <title>hugh</title>
-    <updated>2021-01-17T03:39:16.540Z</updated>
+    <updated>2021-02-04T08:58:52.280Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hughlee95.github.io"/>
     <link rel="self" href="https://hughlee95.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://hughlee95.github.io/images/avatar.png</logo>
     <icon>https://hughlee95.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, hugh</rights>
+    <entry>
+        <title type="html"><![CDATA[Arnaud的建议]]></title>
+        <id>https://hughlee95.github.io/post/arnaud-de-jian-yi/</id>
+        <link href="https://hughlee95.github.io/post/arnaud-de-jian-yi/">
+        </link>
+        <updated>2021-01-20T07:59:42.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[读书笔记《可操作的地震预测预报》陈运泰主编]]></title>
         <id>https://hughlee95.github.io/post/du-shu-bi-ji-lesslesske-cao-zuo-de-di-zhen-yu-ce-yu-bao-greatergreater-chen-yun-tai-zhu-bian/</id>
@@ -32,13 +39,6 @@
         <link href="https://hughlee95.github.io/post/lesslessce-bu-ke-ce-da-qi-da-luo-de-di-zhen-yu-ce-yan-jiu-greatergreater-guan-jian-bu-fen-ti-qu/">
         </link>
         <updated>2021-01-15T07:34:04.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[研究所需书单]]></title>
-        <id>https://hughlee95.github.io/post/yan-jiu-suo-xu-shu-dan/</id>
-        <link href="https://hughlee95.github.io/post/yan-jiu-suo-xu-shu-dan/">
-        </link>
-        <updated>2021-01-11T12:19:26.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[谢谢你给我的温柔]]></title>
