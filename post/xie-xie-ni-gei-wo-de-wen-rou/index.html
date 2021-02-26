@@ -40,7 +40,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
  
   
+    <link rel="stylesheet" href="https://hughlee95.github.io/media/css/prism-atom-dark.css">
+  
 
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
   
 </head>
 
@@ -132,13 +136,9 @@
       </div>
 
       
-        
-          <div id="gitalk-container"></div>
-        
 
-        
       
-
+        <div id="vlaine-comment"></div>
       
 
       <footer class="py-12 text-center px-4 md:px-0" v-pre>
@@ -228,6 +228,11 @@
   
   <!-- Code Highlight -->
   
+    <script src="https://hughlee95.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
@@ -314,28 +319,23 @@
     initImg();
   </script>
   
-  
-    
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
+    <script type="application/javascript" src="https://unpkg.com/valine"></script>
 <script type="application/javascript">
-
-  var gitalk = new Gitalk({
-    clientID: '330133dbb5ddaf01a9cb',
-    clientSecret: '40d5a1248124dc740330ad6607681c000462f907',
-    repo: 'HughLee95.github.io',
-    owner: 'HughLee95',
-    admin: ['HughLee95'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
+  new Valine({
+    el: '#vlaine-comment',
+    appId: '',
+    appKey: '',
+    pageSize: 10,
+    notify: true,
+    avatar: 'mp',
+    verify: true,
+    placeholder: '我好希望你告诉我你的想法呢！！！！',
+    visitor: true,
+    highlight: true,
+    recordIP: true,
   })
-
-  gitalk.render('gitalk-container')
-
 </script>
-
-    
+  
   
 </body>
 

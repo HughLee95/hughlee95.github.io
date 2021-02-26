@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hughlee95.github.io</id>
     <title>hugh</title>
-    <updated>2021-02-22T06:12:33.718Z</updated>
+    <updated>2021-02-26T08:38:27.465Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hughlee95.github.io"/>
     <link rel="self" href="https://hughlee95.github.io/atom.xml"/>
@@ -12,13 +12,6 @@
     <logo>https://hughlee95.github.io/images/avatar.png</logo>
     <icon>https://hughlee95.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, hugh</rights>
-    <entry>
-        <title type="html"><![CDATA[从入门到劝退——科研记录]]></title>
-        <id>https://hughlee95.github.io/post/arnaud-de-jian-yi/</id>
-        <link href="https://hughlee95.github.io/post/arnaud-de-jian-yi/">
-        </link>
-        <updated>2021-01-20T07:59:42.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[读书笔记《可操作的地震预测预报》陈运泰主编]]></title>
         <id>https://hughlee95.github.io/post/du-shu-bi-ji-lesslesske-cao-zuo-de-di-zhen-yu-ce-yu-bao-greatergreater-chen-yun-tai-zhu-bian/</id>
