@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>关于 | hugh</title>
 <meta name="description" content="&lt;p&gt;我希望在这里写我的故事。&lt;/p&gt;
@@ -9,88 +11,84 @@
 &lt;p&gt;写我所想，自由自在&lt;/p&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614329859375">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614329929300">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://hughlee95.github.io">hugh</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="https://hughlee95.github.io" class="menu" target="_blank">
-                主页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu" target="_blank">
-                All Works
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tags" class="menu" target="_blank">
-                Diferent Tags
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/about" class="menu" target="_blank">
-                About me
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hughlee95.github.io">
+        <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614329929300" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hughlee95.github.io">
+        <h1 class="site-title">hugh</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>关于</h1>
-            <p class="article-meta">
-              2019-01-25
-              
-            </p>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a class="menu purple-link" href="https://hughlee95.github.io" class="menu" target="_blank">
+            主页
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/archives" class="menu" target="_blank">
+            All Works
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/tags" class="menu" target="_blank">
+            Diferent Tags
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/post/about" class="menu" target="_blank">
+            About me
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">关于</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
             
-            <div class="post-content">
-              <blockquote>
+          </div>
+          <div class="post-content">
+            <blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
@@ -100,128 +98,46 @@
 <p><img src="https://hughlee95.github.io/post-images/1610364702219.jpg" alt="" loading="lazy"><br>
 <a href="https://www.douban.com/people/hunao1995">豆瓣</a> <a href="https://www.zhihu.com/people/hunao95">知乎</a></p>
 
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-        </div>
+
         
       </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://hughlee95.github.io/images/avatar.png?v=1614329859375" class="no-responsive avatar">
-    <div class="text-muted"><p>我希望在这里写我的故事。</p>
+      
+
+      <div class="site-footer">
+  <div class="slogan"><p>我希望在这里写我的故事。</p>
 <p>有关我的爱情，事业，生活。</p>
 <p>写我所想，自由自在</p></div>
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/du-shu-bi-ji-lesslesske-cao-zuo-de-di-zhen-yu-ce-yu-bao-greatergreater-chen-yun-tai-zhu-bian/">读书笔记《可操作的地震预测预报》陈运泰主编</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/lesslessce-bu-ke-ce-da-qi-da-luo-de-di-zhen-yu-ce-yan-jiu-greatergreater-guan-jian-bu-fen-ti-qu/">读书笔记：《测不可测：大起大落的地震预测研究》</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/xie-xie-ni-gei-wo-de-wen-rou/">谢谢你给我的温柔</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/1-yue-qian-tan-nan-ke-da-he-wo/">1月浅谈南科大和我</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/guan-yu-wo-zi-ji/">关于我自己</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://hughlee95.github.io/post/about/">关于</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://hughlee95.github.io/tag/9SurA8kzZ/" class="badge success">
-          读书笔记
-        </a>
-      
-        <a href="https://hughlee95.github.io/tag/A1XaiRGWjV/" class="badge secondary">
-          个人成长
-        </a>
-      
-        <a href="https://hughlee95.github.io/tag/cfASU2E0c/" class="badge secondary">
-          学习
-        </a>
-      
-        <a href="https://hughlee95.github.io/tag/CcYcyaDzq/" class="badge success">
-          生活
-        </a>
-      
-        <a href="https://hughlee95.github.io/tag/zl-_ITKmcx/" class="badge success">
-          爱情
-        </a>
-      
-        <a href="https://hughlee95.github.io/tag/0q9zJmmmte/" class="badge ">
-          南方科技大学
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    <p>喜欢我就把我加入收藏夹</p> | <a class="rss" href="https://hughlee95.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
+  <p>喜欢我就把我加入收藏夹</p> | <a class="rss" href="https://hughlee95.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
