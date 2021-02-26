@@ -1,94 +1,128 @@
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>从入门到劝退——科研记录 - hugh</title>
-<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://hughlee95.github.io/media/css/tailwind.css">
-<link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="从入门到劝退——科研记录 - hugh - Atom Feed" href="https://hughlee95.github.io/atom.xml">
-
+<!DOCTYPE html>
+<html>
+  <head>
     
+<meta charset="utf-8" >
 
-  <meta name="description" content="
-本文持续更新，给自己一个写下去的动力！！！
+<title>从入门到劝退——科研记录 | hugh</title>
+<meta name="description" content="&lt;p&gt;我希望在这里写我的故事。&lt;/p&gt;
+&lt;p&gt;有关我的爱情，事业，生活。&lt;/p&gt;
+&lt;p&gt;写我所想，自由自在&lt;/p&gt;">
 
-2021年1月20日
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-please always add the source of your information in the form of citations. Easier to..." />
-  <meta property="og:title" content="从入门到劝退——科研记录 - hugh">
-  <meta property="og:description" content="
-本文持续更新，给自己一个写下去的动力！！！
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614334262885">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
 
-2021年1月20日
 
-please always add the source of your information in the form of citations. Easier to..." />
-  <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://hughlee95.github.io/post/arnaud-de-jian-yi/" />
-  <meta property="og:image" content="https://hughlee95.github.io/post-images/arnaud-de-jian-yi.jfif">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="从入门到劝退——科研记录 - hugh">
-  <meta name="twitter:description" content="
-本文持续更新，给自己一个写下去的动力！！！
 
-2021年1月20日
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-please always add the source of your information in the form of citations. Easier to...">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://hughlee95.github.io/post/arnaud-de-jian-yi/">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
- 
-  
 
-  
-</head>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hughlee95.github.io">
+        <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614334262885" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hughlee95.github.io">
+        <h1 class="site-title">hugh</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
 
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-    <a href="https://hughlee95.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
-      hugh
-    </a>
-    <div class="max-w-4xl w-full mx-auto">
-      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
-        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          从入门到劝退——科研记录
-        </h1>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
         
-          <img src="https://hughlee95.github.io/post-images/arnaud-de-jian-yi.jfif" alt="从入门到劝退——科研记录" class="block w-full mb-8">
+          <a class="menu purple-link" href="https://hughlee95.github.io" class="menu" target="_blank">
+            主页
+          </a>
         
-        <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2021-01-20 · 6 min read</div>
+      
+        
+          <a class="menu purple-link" href="/archives" class="menu" target="_blank">
+            All Works
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/tags" class="menu" target="_blank">
+            Diferent Tags
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/post/about" class="menu" target="_blank">
+            About me
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
           
-            <a href="https://hughlee95.github.io/tag/k_tVGaXiq/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              研究
-            </a>
+            <div class="feature-container" style="background-image: url('https://hughlee95.github.io/post-images/arnaud-de-jian-yi.jfif')">
+            </div>
           
-            <a href="https://hughlee95.github.io/tag/A1XaiRGWjV/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              个人成长
-            </a>
-          
-            <a href="https://hughlee95.github.io/tag/cfASU2E0c/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              学习
-            </a>
-          
-            <a href="https://hughlee95.github.io/tag/0q9zJmmmte/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              南方科技大学
-            </a>
-          
-        </div>
-        <div class="markdown mb-8" v-pre>
-          <blockquote>
+          <h2 class="post-title">从入门到劝退——科研记录</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-01-20</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://hughlee95.github.io/tag/k_tVGaXiq/">
+                    研究
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://hughlee95.github.io/tag/A1XaiRGWjV/">
+                    个人成长
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://hughlee95.github.io/tag/cfASU2E0c/">
+                    学习
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://hughlee95.github.io/tag/0q9zJmmmte/">
+                    南方科技大学
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <blockquote>
 <p>本文持续更新，给自己一个写下去的动力！！！</p>
 </blockquote>
 <h2 id="2021年1月20日">2021年1月20日</h2>
@@ -102,14 +136,14 @@ please always add the source of your information in the form of citations. Easie
 <li>Another info to look for: what is the price of drilling (for EGS technology) in China? we need cost per kilometre-depth.</li>
 </ol>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8083903"><label class="task-list-item-label" for="task-item-8083903"> 中国钻孔价格，我们需要这个价格。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3613323"><label class="task-list-item-label" for="task-item-3613323"> 中国钻孔价格，我们需要这个价格。</label></li>
 </ul>
 <ol start="5">
 <li>You gave the power produced at 4 geothermal stations. Can you learn more about <font color=red>their characteristics</font>? We need, ideally, the input parameters need for the R geo-energy model (so temperature gradient there, depth of water circulation, flow rate, etc...). If we can get back to the same powers, then we've got a good basic thermodynamics model.</li>
 </ol>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2390808"><label class="task-list-item-label" for="task-item-2390808"> 这些数据，我都找到了，但是发现中国的实际情况特别复杂。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-431183"><label class="task-list-item-label" for="task-item-431183"> 我的理解有误，实际上不按照这个计算就也行</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5446311"><label class="task-list-item-label" for="task-item-5446311"> 这些数据，我都找到了，但是发现中国的实际情况特别复杂。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8093342"><label class="task-list-item-label" for="task-item-8093342"> 我的理解有误，实际上不按照这个计算就也行</label></li>
 </ul>
 <h2 id="2021年2月4日">2021年2月4日</h2>
 <p>和老板讨论了关于下一步进行的内容，真的就是很受益匪浅，他没有嫌弃我的愚笨就很好了！！感谢！！<br>
@@ -122,19 +156,19 @@ please always add the source of your information in the form of citations. Easie
 2月4日讨论之后，关于EGS我就再也没有进展，就转头去看他的那个国自然申请书。<br>
 然后，收假之后就在看国自然中的算法的一些相关内容。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4788704"><label class="task-list-item-label" for="task-item-4788704">  蒙特卡罗方法</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-492362"><label class="task-list-item-label" for="task-item-492362">  蒙特卡罗方法</label></li>
 </ul>
 <blockquote>
 <p>随机的办法。为了解决无法计算的问题，随机性很强，得到精确值的概率较小。只是需要满足合理性的分布。<font color= blue>需要单独开一篇才能够说清楚这个方法</font></p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5637334"><label class="task-list-item-label" for="task-item-5637334">  马尔科夫链</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8357553"><label class="task-list-item-label" for="task-item-8357553">  马尔科夫链</label></li>
 </ul>
 <blockquote>
 <p>今日之我是由无数个昨日之我构成的！但是今日之我只和昨日之我有强关联。目前状态<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">y_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>之和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">y_{t-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span>有关</p>
 </blockquote>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2457346"><label class="task-list-item-label" for="task-item-2457346">  贝叶斯统计</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2947343"><label class="task-list-item-label" for="task-item-2947343">  贝叶斯统计</label></li>
 </ul>
 <blockquote>
 <p>已知结果反推原因。我要知道现在的你到底是如何成为现在的你。</p>
@@ -149,10 +183,10 @@ please always add the source of your information in the form of citations. Easie
 根据地震风险因素，也已经确认了相关的基准电价和选址的问题。<br>
 现在要解决的问题是依据中国的现状，进行热量的分配。</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8888054"><label class="task-list-item-label" for="task-item-8888054"> rerun paper metamodel</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6074557"><label class="task-list-item-label" for="task-item-6074557"> 查阅相关资料，如何把通用的参数放置于中国的特殊的值中</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2025404"><label class="task-list-item-label" for="task-item-2025404"> 使用该方法，或者叫做检验该方法是否好用，在中国一个地方进行测试</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9352532"><label class="task-list-item-label" for="task-item-9352532"> 利用优化算法，改进元模型，一方面是在哪里分配热量（需要考虑到管道价格、人工成本以及地震风险）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7608037"><label class="task-list-item-label" for="task-item-7608037"> rerun paper metamodel</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-473646"><label class="task-list-item-label" for="task-item-473646"> 查阅相关资料，如何把通用的参数放置于中国的特殊的值中</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-34745"><label class="task-list-item-label" for="task-item-34745"> 使用该方法，或者叫做检验该方法是否好用，在中国一个地方进行测试</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8217949"><label class="task-list-item-label" for="task-item-8217949"> 利用优化算法，改进元模型，一方面是在哪里分配热量（需要考虑到管道价格、人工成本以及地震风险）</label></li>
 </ul>
 <h4 id="目前中国的现状">目前中国的现状</h4>
 <p>还没抗开展这方面的研究，大多停留在地质勘查阶段。<br>
@@ -177,253 +211,89 @@ please always add the source of your information in the form of citations. Easie
 <li>中午 14:00-18:00 重新跑代码关于EGS plant最优site。查询相关资料，为中国化做准备。</li>
 <li>晚上 20:00-23:00 回家写论文</li>
 </ul>
-
-        </div>
-        <!-- Share to Twitter, Weibo, Telegram -->
-        <div class="flex items-center">
-          <div class="mr-4 flex items-center">
-            <i class="ri-share-forward-line text-gray-500"></i>
-          </div>
-          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
-            <i class="ri-twitter-line"></i>
-          </div>
-          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
-            <i class="ri-weibo-line"></i>
-          </div>
-          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
-            <i class="ri-telegram-line"></i>
-          </div>
-        </div>
-      </div>
-
-      
-        
-          <div id="gitalk-container"></div>
-        
-
-        
-      
-
-      
-
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  <p>喜欢我就把我加入收藏夹</p>
-</footer>
-    </div>
-
-    <!-- TOC Container -->
-    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
-      <i class="ri-file-list-line"></i>
-    </div>
-
-    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
-      <div class="flex mb-4 justify-end">
-        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
-          <i class="ri-close-line text-lg"></i>
-        </div>
-      </div>
-      <div class="post-toc-container">
-        <ul class="markdownIt-TOC">
+<h1 id="2021年2月26日15点39分">2021年2月26日15点39分</h1>
+<p>这周总算到了尾声了。周末可以在家好好呆着写硕士毕业论文，好好休息！周日和一个基友开的营养俱乐部（实际上就是卖减肥产品的俱乐部）的人去打羽毛球！</p>
+<blockquote>
+<p>我觉得今天下午我需要把我的博客的评论系统做好，跟着教程先一步一步做！！！！</p>
+</blockquote>
+<h2 id="科研总结">科研总结</h2>
+<p>整理了唐山地震、汶川地震的级联效应，还没有整理完成，下周继续！<br>
+关于EGS重新整理了老师给的代码，可以自己运行出结果，现在遇到下面几个问题，需要和老师、同事、同学商量，看看问题的最优解到底是什么。</p>
+<h3 id="背景">背景</h3>
+<p>目前，中国的煤炭产量丰富，主要采用火力发电。但是，随着不断地能源消耗，总有用完的那一刻。目前由于沿海地区的工业发展过快，很多时候还有限制居民用电，供给工业用电的情况产生。为了满足日益增长的工业需求、人民群众的不断增长的用电需求，需要发展新能源发电。在这里，我们主要考虑地热发电，这是一项并不新颖的发电方法，但是一直以来，中国尚未进行大规模开发利用，一方面可用于发电的地热储能处于不发达的西藏地区、松嫩平原、雷州半岛、漳州半岛、京津冀三角区域。（这只是个草稿而已，没必要认真写啦）所以啊，我们发展地热发电可以让这几个地方的电更多，以期达到节约能源的效果啦。</p>
+<h3 id="问题">问题</h3>
+<p>在Arnaud的文章中，将地震风险加入计算LCOE中。风险的表现形式主要是概率，这个概率最后就变成了不同等级的建筑的损害的概率，然后能够通过概率计算出LCOE的值，可供参考。<br>
+计算出LCOE的值就能够计算出来在哪一个范围内供电，可以达到最优收益，进而通过一个案列来说明建厂的最优选址。这个例子有不合理性，所以需要深入地再次进行研究。</p>
+<ul>
+<li>国内使用的是<font color= blue>COE</font>，这是没有考虑各种成本和发电量的时间价值。那么对于国内的问题，是利用COE还是LCOE进行分析？</li>
+<li>电力交易还是政府占主导地位，现在电力改革，但是难度较大。能否以改革为前提，新建EGS电厂，规定电价？</li>
+<li>针对中国某一地进行全面的研究，分析最优选址问题，分析该地的工业直供电、销售至售电企业的实际情况，提出新的电价核算计算方法。</li>
+</ul>
+<p>在Arnaud的文章中，只进行了关于电价的计算，没有考虑到<font color= blue>供热</font>的问题。</p>
+<ul class="contains-task-list">
 <li>
-<ul>
-<li><a href="#2021%E5%B9%B41%E6%9C%8820%E6%97%A5">2021年1月20日</a></li>
-<li><a href="#2021%E5%B9%B42%E6%9C%884%E6%97%A5">2021年2月4日</a></li>
-<li><a href="#2021%E5%B9%B42%E6%9C%8820%E6%97%A5">2021年2月20日</a>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8Eegs%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E6%83%B3%E6%B3%95">关于EGS的问题的想法</a>
-<ul>
-<li><a href="#%E7%9B%AE%E5%89%8D%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%8E%B0%E7%8A%B6">目前中国的现状</a></li>
-</ul>
+<p>那么接下来我可以考虑的问题可以是，如何进行合理供热？基于供热和供给电能同时选取最优的EGS热电厂的选址问题。最优选址问题不得不对地震风险进行考虑，同时需要考虑现在的经济发展，以及之后的自然灾害风险。一旦有了地震风险，那么我的新的电厂需要建在哪里，建成之前如何评估？</p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1652367"><label class="task-list-item-label" for="task-item-1652367"> 实际上这两个问题都可以继续往下进行。估计可以在博士申请之前得到一到两篇文章，那我到底愿意做什么呢？其实，什么都可以。自己觉得有意思，能够学到很多东西，能够拓展自己以及一部分人的知识边界。倒也不是这么伟大的目的啦。就是不虚此行，就业可以给自己多个选择。不至于非得回到高校，不至于非得去企业界。论文是重要的，工资也是重要的，技能型知识也是重要的。读博，实际上是让自己做更加随心的工作，而不是大家都可以的工作。或者去外国就业也可以。就是这样想的啦。</label></p>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li><a href="#2021%E5%B9%B42%E6%9C%8822%E6%97%A5">2021年2月22日</a>
-<ul>
-<li><a href="#2021%E5%B9%B42%E6%9C%8822%E6%97%A5%E5%88%B02021%E5%B9%B42%E6%9C%8828%E6%97%A5-%E5%91%A8%E8%AE%A1%E5%88%92">2021年2月22日到2021年2月28日 周计划</a></li>
-</ul>
-</li>
-</ul>
+<p><font size=5  color = darkviolet>这是我的博客，我想怎么说就怎么说。就是夸下海口，可以得到一到两篇文章，咋地了！！！</font></p>
+<p>未完待续！！！！</p>
 
-      </div>
-    </div>
-
-    <!-- Back to top -->
-    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
-      <i class="ri-arrow-up-line"></i>
-    </div>
-  </div>
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-  <!-- Background of PhotoSwipe. 
-        It's a separate element as animating opacity is faster than rgba(). -->
-  <div class="pswp__bg">
-  </div>
-  <!-- Slides wrapper with overflow:hidden. -->
-  <div class="pswp__scroll-wrap">
-    <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-    <div class="pswp__container">
-      <div class="pswp__item">
-      </div>
-      <div class="pswp__item">
-      </div>
-      <div class="pswp__item">
-      </div>
-    </div>
-    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-    <div class="pswp__ui pswp__ui--hidden">
-      <div class="pswp__top-bar">
-        <!--  Controls are self-explanatory. Order can be changed. -->
-        <div class="pswp__counter">
-        </div>
-        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-        <!-- element will get class pswp__preloader--active when preloader is running -->
-        <div class="pswp__preloader">
-          <div class="pswp__preloader__icn">
-            <div class="pswp__preloader__cut">
-              <div class="pswp__preloader__donut">
-              </div>
-            </div>
           </div>
         </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://hughlee95.github.io/post/du-shu-bi-ji-lesslesske-cao-zuo-de-di-zhen-yu-ce-yu-bao-greatergreater-chen-yun-tai-zhu-bian/">
+              <h3 class="post-title">
+                下一篇：读书笔记《可操作的地震预测预报》陈运泰主编
+              </h3>
+            </a>
+          </div>
+          
       </div>
-      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-        <div class="pswp__share-tooltip">
-        </div>
-      </div>
-      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-      </button>
-      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-      </button>
-      <div class="pswp__caption">
-        <div class="pswp__caption__center">
-        </div>
-      </div>
-    </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><p>我希望在这里写我的故事。</p>
+<p>有关我的爱情，事业，生活。</p>
+<p>写我所想，自由自在</p></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
+  <p>喜欢我就把我加入收藏夹</p> | <a class="rss" href="https://hughlee95.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://hughlee95.github.io/media/scripts/main.js"></script>
-  
-  <!-- Code Highlight -->
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-  <script>
-    //拿到预览框架，也就是上面的html代码
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-    //定义图片数组变量
-    var imgitems;
-    /**
-    * 用于显示预览界面
-    * @param index 图片数组下标
-    */
-    function viewImg(index) {
-      //其它选项这里不做过多阐述，详情见官网
-      var pswpoptions = {
-        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
-        bgOpacity: 0.7, // 背景透明度，0-1
-        maxSpreadZoom: 3, // 缩放级别，不要太大
-      };
-      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
-      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
-      gallery.init()
-    }
-    /**
-    * 用于添加图片点击事件
-    * @param img 图片元素
-    * @param index 所属下标（在imgitems中的位置）
-    */
-    function addImgClick(img, index) {
-      img.onclick = function() {
-        viewImg(index)
-      }
-    }
-    /**
-    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
-    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
-    * 异步加载图片可在图片元素创建完成后调用此方法
-    */
-    function initImg() {
-      //重置图片数组
-      imgitems = [];
-      //查找class:markdown 下的所有img元素并遍历
-      var imgs = document.querySelectorAll('.markdown img');
-      for (var i = 0; i < imgs.length; i++) {
-        var img = imgs[i];
-        //本站相册初始为loading图片，真实图片放在data-src
-        var ds = img.getAttribute("data-src");
-        //创建image对象，用于获取图片宽高
-        var imgtemp = new Image();
-        //判断是否存在data-src
-        if (ds != null && ds.length > 0) {
-          imgtemp.src = ds
-        } else {
-          imgtemp.src = img.src
-        }
-        //判断是否存在缓存
-        if (imgtemp.complete) {
-          var imgobj = {
-            "src": imgtemp.src,
-            "w": imgtemp.width,
-            "h": imgtemp.height,
-          };
-          imgitems[i] = imgobj;
-          addImgClick(img, i);
-        } else {
-          console.log('进来了2')
-          imgtemp.index = i;
-          imgtemp.img = img;
-          imgtemp.onload = function() {
-            var imgobj = {
-              "src": this.src,
-              "w": this.width,
-              "h": this.height,
-            };
-            //不要使用push，因为onload前后顺序会不同
-            imgitems[this.index] = imgobj
-            //添加点击事件
-            addImgClick(this.img, this.index);
-          }
-        }
-      }
-    }
-    //初始化
-    initImg();
-  </script>
-  
-  
-    
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    </div>
+    <script type="application/javascript">
 
-<script type="application/javascript">
+hljs.initHighlightingOnLoad()
 
-  var gitalk = new Gitalk({
-    clientID: '330133dbb5ddaf01a9cb',
-    clientSecret: '40d5a1248124dc740330ad6607681c000462f907',
-    repo: 'HughLee95.github.io',
-    owner: 'HughLee95',
-    admin: ['HughLee95'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-    
-  
-</body>
 
+
+
+  </body>
 </html>

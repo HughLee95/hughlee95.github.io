@@ -1,99 +1,191 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>hugh</title>
-<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://hughlee95.github.io/media/css/tailwind.css">
-<link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="hugh - Atom Feed" href="https://hughlee95.github.io/atom.xml">
 
+<!DOCTYPE html>
+<html>
+  <head>
     
+<meta charset="utf-8" >
 
-  <meta name="description" content="<p>我希望在这里写我的故事。</p>
-<p>有关我的爱情，事业，生活。</p>
-<p>写我所想，自由自在</p>" />
-</head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
+<title>研究 | hugh</title>
+<meta name="description" content="&lt;p&gt;我希望在这里写我的故事。&lt;/p&gt;
+&lt;p&gt;有关我的爱情，事业，生活。&lt;/p&gt;
+&lt;p&gt;写我所想，自由自在&lt;/p&gt;">
 
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614334262885">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://hughlee95.github.io">
+        <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614334262885" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://hughlee95.github.io">
+        <h1 class="site-title">hugh</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="https://hughlee95.github.io" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        谢谢你能来看我
-      </a>
-    
-      <a href="/archives" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        你想看的都在这里
-      </a>
-    
-      <a href="/tags" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        在标签下，看你感兴趣的
-      </a>
-    
-      <a href="/post/about" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于我的，你不想知道
-      </a>
-    
-    <a href="https://hughlee95.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
 </div>
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        研究
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://hughlee95.github.io/post/arnaud-de-jian-yi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          从入门到劝退——科研记录
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2021-01-20</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        
-本文持续更新，给自己一个写下去的动力！！！
-
-2021年1月20日
-
-please always add the source of your information in the form of citations. Easier to...
-      </div>
-      <a href="https://hughlee95.github.io/post/arnaud-de-jian-yi/" class="btn">
-        Read more
-      </a>
-    </div>
-    
-      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://hughlee95.github.io/post-images/arnaud-de-jian-yi.jfif" alt="从入门到劝退——科研记录">
-    
-  </div>
-  
-      </div>
-
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  <p>喜欢我就把我加入收藏夹</p>
-</footer>
-
+        
+          <a class="menu purple-link" href="https://hughlee95.github.io" class="menu" target="_blank">
+            主页
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/archives" class="menu" target="_blank">
+            All Works
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/tags" class="menu" target="_blank">
+            Diferent Tags
+          </a>
+        
+      
+        
+          <a class="menu purple-link" href="/post/about" class="menu" target="_blank">
+            About me
+          </a>
+        
+      
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://hughlee95.github.io/media/scripts/main.js"></script>
-</body>
+</transition>
+
+
+      <div class="content-container">
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 研究
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://hughlee95.github.io/post/arnaud-de-jian-yi/">
+        <h2 class="post-title">从入门到劝退——科研记录</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2021-01-20</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://hughlee95.github.io/tag/k_tVGaXiq/">
+                研究
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://hughlee95.github.io/tag/A1XaiRGWjV/">
+                个人成长
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://hughlee95.github.io/tag/cfASU2E0c/">
+                学习
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://hughlee95.github.io/tag/0q9zJmmmte/">
+                南方科技大学
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://hughlee95.github.io/post/arnaud-de-jian-yi/">
+        <div class="feature-container" style="background-image: url('https://hughlee95.github.io/post-images/arnaud-de-jian-yi.jfif')">
+        </div>
+      </a>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan"><p>我希望在这里写我的故事。</p>
+<p>有关我的爱情，事业，生活。</p>
+<p>写我所想，自由自在</p></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  <p>喜欢我就把我加入收藏夹</p> | <a class="rss" href="https://hughlee95.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
 </html>
