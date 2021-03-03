@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hughlee95.github.io</id>
     <title>hugh</title>
-    <updated>2021-03-01T06:54:52.576Z</updated>
+    <updated>2021-03-03T06:55:24.748Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hughlee95.github.io"/>
     <link rel="self" href="https://hughlee95.github.io/atom.xml"/>
@@ -12,6 +12,27 @@
     <logo>https://hughlee95.github.io/images/avatar.png</logo>
     <icon>https://hughlee95.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, hugh</rights>
+    <entry>
+        <title type="html"><![CDATA[读书笔记《灾害风险引论》Written by Arnaud Mignan]]></title>
+        <id>https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszai-hai-feng-xian-yin-lun-greatergreater-written-by-arnaud-mignan/</id>
+        <link href="https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszai-hai-feng-xian-yin-lun-greatergreater-written-by-arnaud-mignan/">
+        </link>
+        <updated>2021-03-02T23:48:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[看到的需要查询的知识点]]></title>
+        <id>https://hughlee95.github.io/post/kan-dao-de-xu-yao-cha-xun-de-zhi-shi-dian/</id>
+        <link href="https://hughlee95.github.io/post/kan-dao-de-xu-yao-cha-xun-de-zhi-shi-dian/">
+        </link>
+        <updated>2021-03-02T12:53:50.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[读书笔记《智能优化算法及其MATLAB实例》包子阳等编著]]></title>
+        <id>https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszhi-neng-you-hua-suan-fa-ji-qi-matlab-shi-li-greatergreater-bao-zi-yang-deng-bian-zhu/</id>
+        <link href="https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszhi-neng-you-hua-suan-fa-ji-qi-matlab-shi-li-greatergreater-bao-zi-yang-deng-bian-zhu/">
+        </link>
+        <updated>2021-03-01T06:52:10.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[读书笔记《灾害学》李树刚主编]]></title>
         <id>https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszai-hai-xue-greatergreater-li-shu-gang-zhu-bian/</id>
@@ -34,7 +55,7 @@
         <updated>2021-01-15T08:48:30.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[读书笔记：《测不可测：大起大落的地震预测研究》]]></title>
+        <title type="html"><![CDATA[读书笔记《测不可测：大起大落的地震预测研究》]]></title>
         <id>https://hughlee95.github.io/post/lesslessce-bu-ke-ce-da-qi-da-luo-de-di-zhen-yu-ce-yan-jiu-greatergreater-guan-jian-bu-fen-ti-qu/</id>
         <link href="https://hughlee95.github.io/post/lesslessce-bu-ke-ce-da-qi-da-luo-de-di-zhen-yu-ce-yan-jiu-greatergreater-guan-jian-bu-fen-ti-qu/">
         </link>
@@ -60,12 +81,5 @@
         <link href="https://hughlee95.github.io/post/1-yue-qian-tan-nan-ke-da-he-wo/">
         </link>
         <updated>2021-01-11T11:36:24.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我自己]]></title>
-        <id>https://hughlee95.github.io/post/guan-yu-wo-zi-ji/</id>
-        <link href="https://hughlee95.github.io/post/guan-yu-wo-zi-ji/">
-        </link>
-        <updated>2021-01-11T09:45:27.000Z</updated>
     </entry>
 </feed>

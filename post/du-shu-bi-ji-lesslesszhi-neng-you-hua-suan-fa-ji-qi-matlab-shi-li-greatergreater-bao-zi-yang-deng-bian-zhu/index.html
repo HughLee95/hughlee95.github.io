@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>读书笔记《智能优化算法及其MATLAB实例》包子阳等编著 | hugh</title>
+<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614754514490">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="读书笔记《智能优化算法及其MATLAB实例》包子阳等编著 | hugh - Atom Feed" href="https://hughlee95.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+第二章 遗传算法
+
+遗传算法的特点
+改进方向
+算法流程
+代码流程
+
+Package: mcga
+
+
+
+
+
+
+
+2021年3月1日14点53分
+
+第二章 遗传算法
+遗传算法具有对参数的编码进行操作、不需要推到和附加信息、寻优规则非确定性、自..." />
+    <meta name="keywords" content="研究,读书笔记,学习,南方科技大学" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://hughlee95.github.io">
+  <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614754514490" alt="">
+  </a>
+  <h1 class="site-title">
+    hugh
+  </h1>
+  <p class="site-description">
+    <p>我希望在这里写我的故事。</p>
+<p>有关我的爱情，事业，生活。</p>
+<p>写我所想，自由自在</p>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://hughlee95.github.io" class="menu" target="_blank">
+          主页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" target="_blank">
+          All Works
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" target="_blank">
+          Diferent Tags
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" target="_blank">
+          About me
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              读书笔记《智能优化算法及其MATLAB实例》包子阳等编著
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-03-01
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+                <a href="https://hughlee95.github.io/tag/k_tVGaXiq/" class="post-tag">
+                  # 研究
+                </a>
+              
+                <a href="https://hughlee95.github.io/tag/9SurA8kzZ/" class="post-tag">
+                  # 读书笔记
+                </a>
+              
+                <a href="https://hughlee95.github.io/tag/cfASU2E0c/" class="post-tag">
+                  # 学习
+                </a>
+              
+                <a href="https://hughlee95.github.io/tag/0q9zJmmmte/" class="post-tag">
+                  # 南方科技大学
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://hughlee95.github.io/post-images/du-shu-bi-ji-lesslesszhi-neng-you-hua-suan-fa-ji-qi-matlab-shi-li-greatergreater-bao-zi-yang-deng-bian-zhu.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><ul class="markdownIt-TOC">
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95">第二章 遗传算法</a>
+<ul>
+<li><a href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9">遗传算法的特点</a></li>
+<li><a href="#%E6%94%B9%E8%BF%9B%E6%96%B9%E5%90%91">改进方向</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B">算法流程</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B">代码流程</a>
+<ul>
+<li><a href="#package-mcga">Package: mcga</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>2021年3月1日14点53分</p>
+</blockquote>
+<h1 id="第二章-遗传算法">第二章 遗传算法</h1>
+<p>遗传算法具有对参数的编码进行操作、不需要推到和附加信息、寻优规则非确定性、自组织、自适应和自学习性等特点。<br>
+关键术语：<br>
+模式阶：模式H中确定位置的个数称作该模式的模式阶，记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>H</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(H)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mclose">)</span></span></span></span><br>
+定义距：在模式<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span>中第一个确定位置和最后一个确定位置之间的距离乘坐该模式的定义距，记作<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>(</mo><mi>H</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">D(H)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mclose">)</span></span></span></span><br>
+模式定理：在遗传算法选择、交叉和变异算子的作用下，具有低阶、短定义距，把那个且其平均适应度高于群体平均适应度的模式再子代中将呈指数级增长。<br>
+遗传学与遗传算法术语对应关系<br>
+<img src="https://hughlee95.github.io/post-images/1614737496687.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>下面就是抄了</p>
+</blockquote>
+<ul>
+<li>群体和个体<br>
+群体是生物进化过程中的一个集团，表示可行解集<br>
+个体是造成群体的单个生物体，表示可行解</li>
+<li>染色体和基因<br>
+染色体是包含生物体所有遗传信息的化合物，表示可行解的编码。<br>
+基因是控制社工物体某种性状（即遗传信息）的基本单位，表示可行解编码的分量。</li>
+<li>遗传编码<br>
+遗传编码将有哈变量转化为基因的组合表示形式，优化变量的编码机制有二进制编码、十进制编码等。</li>
+<li>适应度<br>
+适应度即生物群体中个体适应生存环境的能力。在遗传算法中，用来评价个体优劣的数学函数，称为个体的适应度函数。</li>
+<li>遗传操作<br>
+选择、交叉、变异</li>
+</ul>
+<h2 id="遗传算法的特点">遗传算法的特点</h2>
+<ol>
+<li>以决策变量的编码作为运算对象。针对一些只有代码概念而无数值概念或者很难有数值概念的优化问题，编码处理方式更显示出了其独特的优越性。</li>
+<li>直接以目标函数值作为搜索信息。避免了一些不必搜索的点，相当于搜索了更多的点，这是遗传算法所特有的一种隐含并行性。</li>
+<li>一种基于概率的搜索技术。</li>
+<li>具有自组织、自适应和自学习等特性。</li>
+</ol>
+<h2 id="改进方向">改进方向</h2>
+<p>编码机制、选择策略、交叉算子、变异算子、特殊算子和参数设计（包括群体规模、交叉概率、b变异概率）</p>
+<h2 id="算法流程">算法流程</h2>
+<figure data-type="image" tabindex="1"><img src="https://hughlee95.github.io/post-images/1614739276421.png" alt="" loading="lazy"></figure>
+<h2 id="代码流程">代码流程</h2>
+<blockquote>
+<p>就此而言，我主要使用R里面的包进行计算<br>
+代码学习来自于<a href="https://ithelp.ithome.com.tw/users/20111679/ironman/2577">GA WITH YOU</a>，我们台湾的小伙伴！！！！！！</p>
+</blockquote>
+<h3 id="package-mcga">Package: mcga</h3>
+<blockquote>
+<p>mcga是个很简单的计算方法，不能画图，只能进行计算，需要把参数选好，那么获得的值就会准确很多<br>
+<code>library(mcga)</code><br>
+<code>mcga(popsize, chsize, crossprob = 1, mutateprob = 0.01, elitism = 1, minval, maxval, maxiter = 10, evalFunc)</code></p>
+</blockquote>
+<table>
+  <tr>
+    <th colspan="2">参数说明</th>
+  </tr>
+  <tr>
+    <td>popsize</td>
+    <td>种群规模，即染色体数量或个体数目</td>
+  </tr>
+  <tr>
+    <td>chsize</td>
+    <td>参数数量</td>
+  </tr>
+  <tr>
+    <td>crosspro</td>
+    <td>交叉概率</td>
+  </tr>
+  <tr>
+    <td>mutateprob</td>
+    <td>变异概率</td>
+  </tr>
+  <tr>
+    <td>elitism</td>
+    <td>直接复制到子代的最佳个体数目</td>
+  </tr>
+  <tr>
+    <td>minval</td>
+    <td>随机生成初始种群的下边界值</td>
+  </tr>
+  <tr>
+    <td>maxval</td>
+    <td>随机生成初识种群的上边界值</td>
+  </tr>
+  <tr>
+    <td>maxiter</td>
+    <td>最大世代数</td>
+  </tr>
+  <tr>
+    <td>evalFunc</td>
+    <td>计算个体适应度，每一个问题没默认为是最小化问题</td>
+  </tr>
+</table>
+### Package: genalg 
+<p><a href="https://www.rdocumentation.org/packages/genalg/versions/0.2.0">Offical Introduction</a><br>
+<code>rgba 用于浮点数</code></p>
+<table>
+  <tr>
+    <th colspan="2">参数说明</th>
+  </tr>
+  <tr>
+    <td>stringMin</td>
+    <td>vector with minimum values for each gene.</td>
+  </tr>
+  <tr>
+    <td>stringMax</td>
+    <td>vector with maximum values for each gene.</td>
+  </tr>
+  <tr>
+    <td>suggestions</td>
+    <td>optional list of suggested chromosomes</td>
+  </tr>
+  <tr>
+    <td>popSize</td>
+    <td>the population size</td>
+  </tr>
+  <tr>
+    <td>iters</td>
+    <td>the number of iterations</td>
+  </tr>
+  <tr>
+    <td>mutationChance</td>
+    <td>the chance that a gene in the chromosome mutates. </td>
+  </tr>
+  <tr>
+    <td>elitism</td>
+    <td>the number of chromosomes that are kept into the next generation. </td>
+  </tr>
+  <tr>
+    <td>monitorFunc</td>
+    <td>Method run after each generation to allow monitoring of the optimization查看每一个优化的结果</td>
+  </tr>
+  <tr>
+    <td>evalFunc</td>
+    <td>计算个体适应度，每一个问题没默认为是最小化问题</td>
+  </tr>
+  <tr>
+    <td> showSettings</td>
+    <td>if true the settings will be printed to screen. By default False.</td>
+  </tr>
+  <tr>
+    <td>verbose</td>
+    <td> true the algorithm will be more verbose. By default False.</td>
+  </tr>
+</table>
+<p><code>rgba.bin用于二进制</code></p>
+<table>
+  <tr>
+    <th colspan="2">参数说明</th>
+  </tr>
+  <tr>
+    <td>size</td>
+    <td>the number of genes in the chromosome</td>
+  </tr>
+  <tr>
+    <td>suggestions</td>
+    <td>optional list of suggested chromosomes</td>
+  </tr>
+  <tr>
+    <td>popSize</td>
+    <td>the population size</td>
+  </tr>
+  <tr>
+    <td>iters</td>
+    <td>the number of iterations</td>
+  </tr>
+  <tr>
+    <td>mutationChance</td>
+    <td>the chance that a gene in the chromosome mutates. </td>
+  </tr>
+  <tr>
+    <td>elitism</td>
+    <td>the number of chromosomes that are kept into the next generation. </td>
+  </tr>
+  <tr>
+    <td>monitorFunc</td>
+    <td>Method run after each generation to allow monitoring of the optimization查看每一个优化的结果</td>
+  </tr>
+  <tr>
+    <td>evalFunc</td>
+    <td>计算个体适应度，每一个问题没默认为是最小化问题</td>
+  </tr>
+  <tr>
+    <td> showSettings</td>
+    <td>if true the settings will be printed to screen. By default False.</td>
+  </tr>
+  <tr>
+    <td>verbose</td>
+    <td> true the algorithm will be more verbose. By default False.</td>
+  </tr>
+  <tr>
+    <td>zeroToOneRatio</td>
+    <td>the change for a zero for mutations and initialization. This option is used to control the number of set genes in the chromosome. For example, when doing variable selectionm this parameter should be set high to</td>
+  </tr>
+</table>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95">第二章 遗传算法</a>
+<ul>
+<li><a href="#%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9">遗传算法的特点</a></li>
+<li><a href="#%E6%94%B9%E8%BF%9B%E6%96%B9%E5%90%91">改进方向</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B">算法流程</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B">代码流程</a>
+<ul>
+<li><a href="#package-mcga">Package: mcga</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://hughlee95.github.io/post/du-shu-bi-ji-lesslesszai-hai-xue-greatergreater-li-shu-gang-zhu-bian/">
+              <h3 class="post-title">
+                读书笔记《灾害学》李树刚主编
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  <p>喜欢我就把我加入收藏夹</p>
+  <a class="rss" href="https://hughlee95.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
