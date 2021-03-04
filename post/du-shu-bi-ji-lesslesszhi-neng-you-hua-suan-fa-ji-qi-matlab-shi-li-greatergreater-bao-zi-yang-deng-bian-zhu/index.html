@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>读书笔记《智能优化算法及其MATLAB实例》包子阳等编著 | hugh</title>
-<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614754514490">
+<link rel="shortcut icon" href="https://hughlee95.github.io/favicon.ico?v=1614825538205">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://hughlee95.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="读书笔记《智能优化算法及其MATLAB实例》包子阳等编著 | hugh - Atom Feed" href="https://hughlee95.github.io/atom.xml">
@@ -20,17 +20,17 @@
 代码流程
 
 Package: mcga
+Package: genalg
+GA就先不表
 
 
 
 
-
-
-
-2021年3月1日14点53分
-
-第二章 遗传算法
-遗传算法具有对参数的编码进行操作、不需要推到和附加信息、寻优规则非确定性、自..." />
+第三章 差分进化算法
+第四章 免疫算法
+第五章 蚁群算法
+第六章 粒子群算法
+第七章 模..." />
     <meta name="keywords" content="研究,读书笔记,学习,南方科技大学" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -40,7 +40,7 @@ Package: mcga
       <div class="main-content">
         <div class="site-header">
   <a href="https://hughlee95.github.io">
-  <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614754514490" alt="">
+  <img class="avatar" src="https://hughlee95.github.io/images/avatar.png?v=1614825538205" alt="">
   </a>
   <h1 class="site-title">
     hugh
@@ -102,7 +102,7 @@ Package: mcga
                 2021-03-01
               </span>
               <span>
-                5 min read
+                6 min read
               </span>
               
                 <a href="https://hughlee95.github.io/tag/k_tVGaXiq/" class="post-tag">
@@ -136,12 +136,21 @@ Package: mcga
 <li><a href="#%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B">代码流程</a>
 <ul>
 <li><a href="#package-mcga">Package: mcga</a></li>
+<li><a href="#package-genalg">Package: genalg</a></li>
+<li><a href="#ga%E5%B0%B1%E5%85%88%E4%B8%8D%E8%A1%A8"><code>GA就先不表</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%B7%AE%E5%88%86%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95">第三章 差分进化算法</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%85%8D%E7%96%AB%E7%AE%97%E6%B3%95">第四章 免疫算法</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95">第五章 蚁群算法</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95">第六章 粒子群算法</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95">第七章 模拟退火算法</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%A6%81%E5%BF%8C%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95">第八章 禁忌搜索算法</a></li>
 </ul>
 </p>
+<p>其中所有的代码都在我的Github中，喜欢的可以Fork、Star、Follow me</p>
 <blockquote>
 <p>2021年3月1日14点53分</p>
 </blockquote>
@@ -233,7 +242,7 @@ Package: mcga
     <td>计算个体适应度，每一个问题没默认为是最小化问题</td>
   </tr>
 </table>
-### Package: genalg 
+<h3 id="package-genalg">Package: genalg</h3>
 <p><a href="https://www.rdocumentation.org/packages/genalg/versions/0.2.0">Offical Introduction</a><br>
 <code>rgba 用于浮点数</code></p>
 <table>
@@ -335,6 +344,16 @@ Package: mcga
     <td>the change for a zero for mutations and initialization. This option is used to control the number of set genes in the chromosome. For example, when doing variable selectionm this parameter should be set high to</td>
   </tr>
 </table>
+<h3 id="ga就先不表"><code>GA就先不表</code></h3>
+<blockquote>
+<p>其实和之前的大同小异</p>
+</blockquote>
+<h1 id="第三章-差分进化算法">第三章 差分进化算法</h1>
+<h1 id="第四章-免疫算法">第四章 免疫算法</h1>
+<h1 id="第五章-蚁群算法">第五章 蚁群算法</h1>
+<h1 id="第六章-粒子群算法">第六章 粒子群算法</h1>
+<h1 id="第七章-模拟退火算法">第七章 模拟退火算法</h1>
+<h1 id="第八章-禁忌搜索算法">第八章 禁忌搜索算法</h1>
 
               </div>
               <div class="toc-container">
@@ -347,10 +366,18 @@ Package: mcga
 <li><a href="#%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B">代码流程</a>
 <ul>
 <li><a href="#package-mcga">Package: mcga</a></li>
+<li><a href="#package-genalg">Package: genalg</a></li>
+<li><a href="#ga%E5%B0%B1%E5%85%88%E4%B8%8D%E8%A1%A8"><code>GA就先不表</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%B7%AE%E5%88%86%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95">第三章 差分进化算法</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%85%8D%E7%96%AB%E7%AE%97%E6%B3%95">第四章 免疫算法</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95">第五章 蚁群算法</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%B2%92%E5%AD%90%E7%BE%A4%E7%AE%97%E6%B3%95">第六章 粒子群算法</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95">第七章 模拟退火算法</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%A6%81%E5%BF%8C%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95">第八章 禁忌搜索算法</a></li>
 </ul>
 
               </div>
