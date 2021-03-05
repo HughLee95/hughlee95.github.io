@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hughlee95.github.io</id>
     <title>hugh</title>
-    <updated>2021-03-04T13:14:36.891Z</updated>
+    <updated>2021-03-05T06:03:41.684Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hughlee95.github.io"/>
     <link rel="self" href="https://hughlee95.github.io/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://hughlee95.github.io/images/avatar.png</logo>
     <icon>https://hughlee95.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, hugh</rights>
+    <entry>
+        <title type="html"><![CDATA[中国EGS的科研想象]]></title>
+        <id>https://hughlee95.github.io/post/zhong-guo-egs-de-ke-yan-xiang-xiang/</id>
+        <link href="https://hughlee95.github.io/post/zhong-guo-egs-de-ke-yan-xiang-xiang/">
+        </link>
+        <updated>2021-03-04T07:54:31.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[课堂笔记《文学理论》杨宁]]></title>
         <id>https://hughlee95.github.io/post/ke-tang-bi-ji-lesslesswen-xue-li-lun-greatergreater-yang-ning/</id>
@@ -74,12 +81,5 @@
         <link href="https://hughlee95.github.io/post/yan-jiu-suo-xu-shu-dan/">
         </link>
         <updated>2021-01-11T12:19:26.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[谢谢你给我的温柔]]></title>
-        <id>https://hughlee95.github.io/post/xie-xie-ni-gei-wo-de-wen-rou/</id>
-        <link href="https://hughlee95.github.io/post/xie-xie-ni-gei-wo-de-wen-rou/">
-        </link>
-        <updated>2021-01-11T11:47:57.000Z</updated>
     </entry>
 </feed>
